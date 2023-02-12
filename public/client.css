@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    color: aliceblue;
+    background-color: #1d1e22;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+        Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+  .item {
+    background-color: #252526;
+    float:left;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin:10px;
+    width: 200px;
+    height: 250px;
+  }
+  
+  .item h2 {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .item img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .item img:hover {
+    cursor: pointer;
+  }
+
+  .command-button {
+    width: 30px;
+    height: 30px;
+    background-color: #333333;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    cursor: pointer;
+    float: left;
+  }
+
+  .on-off-icon {
+    content: url(icons/power-on.svg);
+    width: 20px;
+  }
+  
+  .on-off-icon:hover {
+    filter: brightness(150%) drop-shadow(0 0 10px yellow);
+  }
+  
+  .on-off-icon[data-state="0"] {
+    filter: invert(6%) sepia(6%) saturate(21%) hue-rotate(316deg) brightness(92%) contrast(86%);
+  }
+  
+  .on-off-icon[data-state="1"] {
+    filter: invert(47%) sepia(84%) saturate(1994%) hue-rotate(82deg) brightness(107%) contrast(109%);
+  }
+  
+  .on-off-icon[data-state="1"]:hover {
+    text-shadow: 0 0 10px yellow;
+  }
